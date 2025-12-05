@@ -1,0 +1,41 @@
+// VISTA PAGOS
+section#pagos.vista
+  h3 Módulo de pagos
+  form.formulario(onsubmit="return false;")
+    .campo
+      label(for="pagReserva") Reserva
+      select#pagReserva
+        option Seleccionar reserva
+        option Reserva 1 - Carlos Pérez
+    .campo
+      label(for="pagFecha") Fecha de pago
+      input#pagFecha(type="date")
+    .campo
+      label(for="pagMonto") Monto
+      input#pagMonto(type="number", step="0.01", placeholder="0.00")
+    .campo
+      label(for="pagMetodo") Método de pago
+      select#pagMetodo
+        option Efectivo
+        option Tarjeta
+        option Transferencia
+  .botones
+    button.boton.primario(type="button") Registrar pago
+    button.boton.secundario(type="button") Limpiar
+  table
+    thead
+      tr
+        th ID
+        th Reserva
+        th Fecha
+        th Monto
+        th Método
+        th Acciones
+    tbody
+      tr
+        td 1
+        td Reserva 1
+        td 2025-12-05
+        td S/ 50.00
+        td Efectivo
+        td Ver recibo

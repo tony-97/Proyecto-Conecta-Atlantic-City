@@ -1,0 +1,28 @@
+// VISTA PUNTOS CLIENTE
+section#puntos.vista
+  h3 Módulo de puntos de cliente
+  form.formulario(onsubmit="return false;")
+    .campo
+      label(for="ptoCliente") Cliente
+      select#ptoCliente
+        option Seleccionar cliente
+        option Carlos Pérez
+    .campo
+      label(for="ptoTotal") Puntos totales
+      input#ptoTotal(type="number", placeholder="0")
+  .botones
+    button.boton.primario(type="button") Guardar puntos
+    button.boton.secundario(type="button") Limpiar
+  table
+    thead
+      tr
+        th ID puntos
+        th Cliente
+        th Puntos totales
+        th Acciones
+    tbody
+      tr
+        td 1
+        td Carlos Pérez
+        td 150
+        td Editar | Eliminar

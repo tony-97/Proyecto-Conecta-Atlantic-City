@@ -1,0 +1,44 @@
+// VISTA PERSONAL Y AUDITORÍA (USUARIOS)
+section#personal.vista
+  h3 Módulo de usuarios del sistema y auditoría
+  h4(style="margin-top: 10px; margin-bottom: 8px") Usuario
+  form.formulario(onsubmit="return false;")
+    .campo
+      label(for="admNombre") Nombre
+      input#admNombre(type="text")
+    .campo
+      label(for="admApellido") apellido
+      input#admApellido(type="text")
+    .campo
+      label(for="admUsuario") Usuario
+      input#admUsuario(type="text")
+    .campo
+      label(for="admContra") Contraseña
+      input#admContra(type="password")
+    .campo
+      label(for="admRol") Rol
+      input#admRol(type="text", placeholder="operador,supervisor, etc")
+    .campo
+      label(for="perCargo") Cargo
+      input#perCargo(type="text", placeholder="General,gerencia TI, etc")
+  .botones
+    button.boton.primario(type="button")
+      | Guardar Usuario
+    button.boton.secundario(type="button") Limpiar
+  h4(style="margin-top: 18px; margin-bottom: 8px")
+    | Registro de auditoría
+  table
+    thead
+      tr
+        th ID
+        th Acción
+        th Fecha y hora
+        th Personal
+        th Usuario
+    tbody
+      tr
+        td 1
+        td Registro de nuevo cliente
+        td 2025-12-05 18:15
+        td Juan Torres
+        td Usuario 1

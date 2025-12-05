@@ -1,0 +1,45 @@
+// VISTA RECLAMOS
+section#reclamos.vista
+  h3 Módulo de reclamos
+  form.formulario(onsubmit="return false;")
+    .campo
+      label(for="recCliente") Cliente
+      select#recCliente
+        option Seleccionar cliente
+        option Carlos Pérez
+    .campo
+      label(for="recPersonal") Personal asignado
+      select#recPersonal
+        option Seleccionar personal
+        option Juan Torres
+    .campo
+      label(for="recFecha") Fecha
+      input#recFecha(type="date")
+    .campo
+      label(for="recEstado") Estado
+      select#recEstado
+        option Abierto
+        option En proceso
+        option Cerrado
+    .campo(style="grid-column: 1/3")
+      label(for="recDesc") Descripción del reclamo
+      textarea#recDesc(placeholder="Detalle del reclamo")
+  .botones
+    button.boton.primario(type="button")
+      | Guardar reclamo
+    button.boton.secundario(type="button") Limpiar
+  table
+    thead
+      tr
+        th ID
+        th Cliente
+        th Personal
+        th Fecha
+        th Estado
+    tbody
+      tr
+        td 1
+        td Carlos Pérez
+        td Juan Torres
+        td 2025-12-05
+        td Abierto

@@ -1,0 +1,38 @@
+// VISTA PROMOCIONES
+section#promociones.vista
+  h3 Módulo de promociones
+  form.formulario(onsubmit="return false;")
+    .campo
+      label(for="proNombre") Nombre de la promoción
+      input#proNombre(type="text", placeholder="Ejemplo dos por uno en fichas")
+    .campo
+      label(for="proTipo") Tipo
+      input#proTipo(type="text", placeholder="Descuento, puntos extra, etc")
+    .campo
+      label(for="proInicio") Fecha de inicio
+      input#proInicio(type="date")
+    .campo
+      label(for="proFin") Fecha de fin
+      input#proFin(type="date")
+    .campo(style="grid-column: 1/3")
+      label(for="proDesc") Descripción
+      textarea#proDesc(placeholder="Detalle de la promoción")
+  .botones
+    button.boton.primario(type="button")
+      | Guardar promoción
+    button.boton.secundario(type="button") Limpiar
+  table
+    thead
+      tr
+        th ID
+        th Promoción
+        th Tipo
+        th Inicio
+        th Fin
+    tbody
+      tr
+        td 1
+        td Dos por uno en fichas
+        td Bonificación
+        td 2025-12-01
+        td 2025-12-31

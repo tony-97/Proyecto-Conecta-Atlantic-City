@@ -1,0 +1,43 @@
+// VISTA CLIENTES
+section#clientes.vista
+  h3 Módulo de clientes
+  form.formulario(onsubmit="return false;")
+    .campo
+      label(for="cliNombres") Nombres
+      input#cliNombres(type="text", placeholder="Nombres del cliente")
+    .campo
+      label(for="cliApellidos") Apellidos
+      input#cliApellidos(type="text", placeholder="Apellidos del cliente")
+    .campo
+      label(for="cliDocumento") DNI o pasaporte
+      input#cliDocumento(type="text", placeholder="Documento de identidad")
+    .campo
+      label(for="cliTelefono") Teléfono
+      input#cliTelefono(type="text", placeholder="Número de teléfono")
+    .campo
+      label(for="cliCorreo") Correo electrónico
+      input#cliCorreo(type="email", placeholder="correo@ejemplo.com")
+    .campo
+      label(for="cliContra") Contraseña
+      input#cliContra(type="password", placeholder="Contraseña")
+  .botones
+    button.boton.primario(type="button")
+      | Guardar cliente
+    button.boton.secundario(type="button") Limpiar
+  table
+    thead
+      tr
+        th ID
+        th Nombres
+        th Documento
+        th Teléfono
+        th Correo
+        th Acciones
+    tbody
+      tr
+        td 1
+        td Carlos Pérez
+        td 12345678
+        td 987654321
+        td carlos@correo.com
+        td Editar | Eliminar

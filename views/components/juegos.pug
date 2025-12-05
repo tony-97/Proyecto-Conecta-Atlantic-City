@@ -1,0 +1,32 @@
+// VISTA JUEGOS
+section#juegos.vista
+  h3 Módulo de juegos
+  form.formulario(onsubmit="return false;")
+    .campo
+      label(for="jueNombre") Nombre del juego
+      input#jueNombre(type="text", placeholder="Ejemplo ruleta digital")
+    .campo
+      label(for="jueTipo") Tipo
+      select#jueTipo
+        option Casino
+        option Apuesta deportiva
+        option Otro
+    .campo(style="grid-column: 1/3")
+      label(for="jueDesc") Descripción
+      textarea#jueDesc(placeholder="Descripción del juego")
+  .botones
+    button.boton.primario(type="button") Guardar juego
+    button.boton.secundario(type="button") Limpiar
+  table
+    thead
+      tr
+        th ID
+        th Juego
+        th Tipo
+        th Acciones
+    tbody
+      tr
+        td 1
+        td Ruleta digital
+        td Casino
+        td Editar | Eliminar

@@ -1,0 +1,51 @@
+// VISTA TRANSACCIONES
+section#transacciones.vista
+  h3 Módulo de transacciones de juego
+  form.formulario(onsubmit="return false;")
+    .campo
+      label(for="trCliente") Cliente
+      select#trCliente
+        option Seleccionar cliente
+        option Carlos Pérez
+    .campo
+      label(for="trJuego") Juego
+      select#trJuego
+        option Seleccionar juego
+        option Ruleta digital
+    .campo
+      label(for="trApostado") Monto apostado
+      input#trApostado(type="number", step="0.01")
+    .campo
+      label(for="trGanado") Monto ganado
+      input#trGanado(type="number", step="0.01")
+    .campo
+      label(for="trResultado") Resultado
+      select#trResultado
+        option Ganó
+        option Perdió
+    .campo
+      label(for="trFechaHora") Fecha y hora
+      input#trFechaHora(type="datetime-local")
+  .botones
+    button.boton.primario(type="button")
+      | Registrar transacción
+    button.boton.secundario(type="button") Limpiar
+  table
+    thead
+      tr
+        th ID
+        th Cliente
+        th Juego
+        th Monto apostado
+        th Monto ganado
+        th Resultado
+        th Fecha y hora
+    tbody
+      tr
+        td 1
+        td Carlos Pérez
+        td Ruleta digital
+        td S/ 10.00
+        td S/ 0.00
+        td Perdió
+        td 2025-12-05 19:30

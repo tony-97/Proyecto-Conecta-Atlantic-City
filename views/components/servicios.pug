@@ -1,0 +1,35 @@
+// VISTA SERVICIOS
+section#servicios.vista
+  h3 Módulo de servicios
+  form.formulario(onsubmit="return false;")
+    .campo
+      label(for="srvNombre") Nombre del servicio
+      input#srvNombre(type="text", placeholder="Ejemplo sala de juegos")
+    .campo
+      label(for="srvPrecio") Precio
+      input#srvPrecio(type="number", step="0.01", placeholder="0.00")
+    .campo
+      label(for="srvCapacidad") Capacidad
+      input#srvCapacidad(type="number", placeholder="Cantidad de personas")
+    .campo(style="grid-column: 1/3")
+      label(for="srvDesc") Descripción
+      textarea#srvDesc(placeholder="Descripción del servicio")
+  .botones
+    button.boton.primario(type="button")
+      | Guardar servicio
+    button.boton.secundario(type="button") Limpiar
+  table
+    thead
+      tr
+        th ID
+        th Servicio
+        th Precio
+        th Capacidad
+        th Acciones
+    tbody
+      tr
+        td 1
+        td Sala de juegos familiar
+        td S/ 50.00
+        td 20
+        td Editar | Eliminar

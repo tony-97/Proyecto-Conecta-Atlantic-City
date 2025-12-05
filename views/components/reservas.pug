@@ -1,0 +1,49 @@
+// VISTA RESERVAS
+section#reservas.vista
+  h3 Módulo de reservas
+  form.formulario(onsubmit="return false;")
+    .campo
+      label(for="resCliente") Cliente
+      select#resCliente
+        option Seleccionar cliente
+        option Carlos Pérez
+    .campo
+      label(for="resServicio") Servicio
+      select#resServicio
+        option Seleccionar servicio
+        option Sala de juegos familiar
+    .campo
+      label(for="resFecha") Fecha de reserva
+      input#resFecha(type="date")
+    .campo
+      label(for="resHora") Hora
+      input#resHora(type="time")
+    .campo
+      label(for="resEstado") Estado
+      select#resEstado
+        option Pendiente
+        option Confirmada
+        option Cancelada
+  .botones
+    button.boton.primario(type="button")
+      | Guardar reserva
+    button.boton.secundario(type="button") Limpiar
+  table
+    thead
+      tr
+        th ID
+        th Cliente
+        th Servicio
+        th Fecha
+        th Hora
+        th Estado
+        th Acciones
+    tbody
+      tr
+        td 1
+        td Carlos Pérez
+        td Sala de juegos familiar
+        td 2025-12-05
+        td 18:00
+        td Pendiente
+        td Editar | Eliminar
