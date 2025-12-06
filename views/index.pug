@@ -6,31 +6,43 @@ block content
       div
         h1 Proyecto Conecta Atlantic City
         ul.menu
-          li
-            button.activo(data-vista="dashboard") Inicio
-          li
-            button(data-vista="clientes") Clientes
-          li
-            button(data-vista="puntos") Puntos de cliente
-          li
-            button(data-vista="segmentacion") Segmentación de cliente
-          li
-            button(data-vista="servicios") Servicios
-          li
-            button(data-vista="reservas") Reservas
-          li
-            button(data-vista="pagos") Pagos
-          li
-            button(data-vista="juegos") Juegos
-          li
-            button(data-vista="transacciones") Transacciones de juego
-          li
-            button(data-vista="promociones") Promociones
-          li
-            button(data-vista="reclamos") Reclamos
-          li
-            button(data-vista="personal")
-              | Usuarios y Auditoría
+          if userViews.includes('dashboard')
+            li
+              button.activo(data-vista="dashboard") Inicio
+          if userViews.includes('clientes')
+            li
+              button(data-vista="clientes") Clientes
+          if userViews.includes('puntos')
+            li
+              button(data-vista="puntos") Puntos de cliente
+          if userViews.includes('segmentacion')
+            li
+              button(data-vista="segmentacion") Segmentación de cliente
+          if userViews.includes('servicios')
+            li
+              button(data-vista="servicios") Servicios
+          if userViews.includes('reservas')
+            li
+              button(data-vista="reservas") Reservas
+          if userViews.includes('pagos')
+            li
+              button(data-vista="pagos") Pagos
+          if userViews.includes('juegos')
+            li
+              button(data-vista="juegos") Juegos
+          if userViews.includes('transacciones')
+            li
+              button(data-vista="transacciones") Transacciones de juego
+          if userViews.includes('promociones')
+            li
+              button(data-vista="promociones") Promociones
+          if userViews.includes('reclamos')
+            li
+              button(data-vista="reclamos") Reclamos
+          if userViews.includes('personal')
+            li
+              button(data-vista="personal")
+                | Usuarios y Auditoría
       .sidebar-footer
         if user
           p Usuario: #{user.usuario}
@@ -54,18 +66,30 @@ block content
           h3 Reclamos abiertos
           p 3
       // VISTAS (COMPONENTES)
-      include components/dashboard.pug
-      include components/clientes.pug
-      include components/puntos.pug
-      include components/segmentacion.pug
-      include components/servicios.pug
-      include components/reservas.pug
-      include components/pagos.pug
-      include components/juegos.pug
-      include components/transacciones.pug
-      include components/promociones.pug
-      include components/reclamos.pug
-      include components/personal.pug
+      if userViews.includes('dashboard')
+        include components/dashboard.pug
+      if userViews.includes('clientes')
+        include components/clientes.pug
+      if userViews.includes('puntos')
+        include components/puntos.pug
+      if userViews.includes('segmentacion')
+        include components/segmentacion.pug
+      if userViews.includes('servicios')
+        include components/servicios.pug
+      if userViews.includes('reservas')
+        include components/reservas.pug
+      if userViews.includes('pagos')
+        include components/pagos.pug
+      if userViews.includes('juegos')
+        include components/juegos.pug
+      if userViews.includes('transacciones')
+        include components/transacciones.pug
+      if userViews.includes('promociones')
+        include components/promociones.pug
+      if userViews.includes('reclamos')
+        include components/reclamos.pug
+      if userViews.includes('personal')
+        include components/personal.pug
   script.
     // cambio de vistas
     const botones = document.querySelectorAll(".menu button");
