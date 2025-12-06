@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  .login-container
+    .login-box
+      h1 Proyecto Conecta Atlantic City
+      p Ingresa tus credenciales para acceder al panel
+      form.formulario
+        .campo
+          label(for='usuario-login') Usuario
+          input#usuario-login(type='text', name='usuario', required)
+        .campo
+          label(for='contrasena-login') Contraseña
+          input#contrasena-login(type='password', name='contrasena', required)
+        .botones
+          button.boton.primario(type='submit') Ingresar
