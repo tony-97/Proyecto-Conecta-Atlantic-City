@@ -5,7 +5,9 @@ block content
     .login-box
       h1 Proyecto Conecta Atlantic City
       p Ingresa tus credenciales para acceder al panel
-      form.formulario
+      if error
+        p(style="color: red; text-align: center; margin-bottom: 1rem;")= error
+      form.formulario(method="POST" action="/users/login")
         .campo
           label(for='usuario-login') Usuario
           input#usuario-login(type='text', name='usuario', required)

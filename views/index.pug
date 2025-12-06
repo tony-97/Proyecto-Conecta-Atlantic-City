@@ -2,36 +2,39 @@ extends layout
 
 block content
   .layout
-    // BARRA LATERAL
     aside.sidebar
-      h1 Proyecto Conecta Atlantic City
-      ul.menu
-        li
-          button.activo(data-vista="dashboard") Inicio
-        li
-          button(data-vista="clientes") Clientes
-        li
-          button(data-vista="puntos") Puntos de cliente
-        li
-          button(data-vista="segmentacion") Segmentación de cliente
-        li
-          button(data-vista="servicios") Servicios
-        li
-          button(data-vista="reservas") Reservas
-        li
-          button(data-vista="pagos") Pagos
-        li
-          button(data-vista="juegos") Juegos
-        li
-          button(data-vista="transacciones") Transacciones de juego
-        li
-          button(data-vista="promociones") Promociones
-        li
-          button(data-vista="reclamos") Reclamos
-        li
-          button(data-vista="personal")
-            | Usuarios y Auditoría
-    // CONTENIDO PRINCIPAL
+      div
+        h1 Proyecto Conecta Atlantic City
+        ul.menu
+          li
+            button.activo(data-vista="dashboard") Inicio
+          li
+            button(data-vista="clientes") Clientes
+          li
+            button(data-vista="puntos") Puntos de cliente
+          li
+            button(data-vista="segmentacion") Segmentación de cliente
+          li
+            button(data-vista="servicios") Servicios
+          li
+            button(data-vista="reservas") Reservas
+          li
+            button(data-vista="pagos") Pagos
+          li
+            button(data-vista="juegos") Juegos
+          li
+            button(data-vista="transacciones") Transacciones de juego
+          li
+            button(data-vista="promociones") Promociones
+          li
+            button(data-vista="reclamos") Reclamos
+          li
+            button(data-vista="personal")
+              | Usuarios y Auditoría
+      .sidebar-footer
+        if user
+          p Usuario: #{user.usuario}
+        a(href="/users/logout") Cerrar Sesión
     main.content
       header
         h2 Panel principal
